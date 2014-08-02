@@ -1,14 +1,14 @@
 package com.github.jreddit.subreddit;
 
 
-import com.github.jreddit.utils.ApiEndpointUtils;
-import com.github.jreddit.utils.restclient.HttpRestClient;
-import com.github.jreddit.utils.restclient.RestClient;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.github.jreddit.utils.ApiEndpointUtils;
+import com.github.jreddit.utils.restclient.RestClient;
 
 /**
  * Class to deal with Subreddits

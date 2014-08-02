@@ -89,7 +89,7 @@ public class Submissions {
      * @return <code>PaginationResult<Submission></Submission></code> of submissions on the subreddit.
      */
     public PaginationResult<Submission> getSubmissions(String subreddit, String after) {
-        PaginationResult<Submission> result = new PaginationResult();
+        PaginationResult<Submission> result = new PaginationResult<Submission>();
         List<Submission> submissions = new ArrayList<Submission>(500);
         try {
             // Send GET request to get the account overview

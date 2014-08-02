@@ -8,8 +8,9 @@ package com.github.jreddit.exception;
  * @author Raul Rene Lepsa
  */
 public class InvalidUserException extends Exception {
+	private static final long serialVersionUID = 420565640310669470L;
 
-    public InvalidUserException() {
+	public InvalidUserException() {
         super();
     }
 

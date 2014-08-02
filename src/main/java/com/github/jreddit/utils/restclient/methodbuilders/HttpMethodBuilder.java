@@ -9,26 +9,32 @@ import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class HttpMethodBuilder<T extends HttpMethodBuilder, O extends HttpRequestBase> {
+public abstract class HttpMethodBuilder<T extends HttpMethodBuilder<?, ?>, O extends HttpRequestBase> {
 
     protected final List<Header> headers = new ArrayList<Header>();
     protected URI uri;
 
-    public T withUrl(String url) throws URISyntaxException {
+	public T withUrl(String url) throws URISyntaxException {
         this.uri = new URI(url);
-        return (T) this;
+        @SuppressWarnings("unchecked")
+        T returns = (T) this;
+        return returns;
     }
 
     public T withCookie(String cookie) {
         if (cookie != null && !cookie.isEmpty()) {
             headers.add(new BasicHeader("cookie", "reddit_session=" + cookie));
         }
-        return (T) this;
+        @SuppressWarnings("unchecked")
+        T returns = (T) this;
+        return returns;
     }
 
     public T withUserAgent(String userAgent) {
         headers.add(new BasicHeader("User-Agent", userAgent));
-        return (T) this;
+        @SuppressWarnings("unchecked")
+        T returns = (T) this;
+        return returns;
     }
 
     public abstract O build();

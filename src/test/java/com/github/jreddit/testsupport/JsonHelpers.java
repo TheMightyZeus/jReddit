@@ -162,6 +162,12 @@ public class JsonHelpers {
         return message;
     }
 
+    public static JSONArray jsonArrayOf(JSONObject[] args) {
+        JSONArray array = new JSONArray();
+        addAll(array, args);
+        return array;
+    }
+
     public static JSONArray jsonArrayOf(Object... args) {
         JSONArray array = new JSONArray();
         addAll(array, args);

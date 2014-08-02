@@ -6,8 +6,9 @@ package com.github.jreddit.exception;
  * @author Raul Rene Lepsa
  */
 public class InvalidURIException extends Exception {
+	private static final long serialVersionUID = 2199264525157089153L;
 
-    public InvalidURIException() {
+	public InvalidURIException() {
         super();
     }
 
